@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
+import HeroImage from '../components/HeroImage'
 
 const apartments = [
   {
@@ -150,11 +151,7 @@ export default function Accommodations() {
     <main>
       {/* Cinematic header with real photo */}
       <section className="relative h-[60vh] md:h-[70vh] overflow-hidden bg-forest">
-        <img
-          src="/outside.png"
-          alt="Vaznik Farm House"
-          className="w-full h-full object-cover object-center"
-        />
+        <HeroImage className="w-full h-full object-cover" objectPosition="center" priority={true} />
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(to bottom, rgba(10,25,15,0.1) 0%, rgba(10,25,15,0.35) 55%, rgba(10,25,15,0.80) 100%)'
         }} />

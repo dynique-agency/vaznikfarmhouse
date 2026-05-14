@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useScroll, useTransform, useInView } from 'framer-motion'
+import HeroImage from '../components/HeroImage'
 
 // Animated counter hook
 function useCounter(target, suffix = '', decimals = 0) {
@@ -117,7 +118,7 @@ function HeroSection() {
   return (
     <section ref={ref} className="relative h-screen overflow-hidden bg-forest">
       <motion.div style={{ scale }} className="absolute inset-0 w-full h-full">
-        <img src="/outside.png" alt="Vaznik Farm House at golden hour" className="w-full h-full object-cover object-center" />
+        <HeroImage className="w-full h-full object-cover" objectPosition="center" priority={true} />
       </motion.div>
       <div className="absolute inset-0" style={{
         background: 'linear-gradient(to bottom, rgba(10,25,15,0.2) 0%, rgba(10,25,15,0.08) 35%, rgba(10,25,15,0.55) 70%, rgba(10,25,15,0.85) 100%)'

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import HeroImage from '../components/HeroImage'
 
 const lifestyle = [
   {
@@ -90,11 +91,7 @@ export default function Experience() {
     <main>
       {/* Cinematic header with real photo */}
       <section className="relative h-[60vh] md:h-[70vh] overflow-hidden bg-forest">
-        <img
-          src="/outside.png"
-          alt="Vaznik Farm House"
-          className="w-full h-full object-cover object-bottom"
-        />
+        <HeroImage className="w-full h-full object-cover" objectPosition="bottom" priority={true} />
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(to bottom, rgba(10,25,15,0.05) 0%, rgba(10,25,15,0.3) 50%, rgba(10,25,15,0.82) 100%)'
         }} />

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import HeroImage from '../components/HeroImage'
 
 const rules = [
   { label: 'Check-in', value: '14:00 – 18:00', note: 'Contact us in advance for late arrivals.' },
@@ -15,11 +16,7 @@ function RoadSection() {
     <section className="relative h-[55vh] md:h-[70vh] overflow-hidden bg-forest flex items-end">
       {/* Real photo */}
       <div className="absolute inset-0">
-        <img
-          src="/outside.png"
-          alt="Vaznik Farm House approach"
-          className="w-full h-full object-cover object-top"
-        />
+        <HeroImage className="w-full h-full object-cover" objectPosition="top" priority={true} />
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(to bottom, rgba(10,25,15,0.15) 0%, rgba(10,25,15,0.45) 60%, rgba(10,25,15,0.85) 100%)'
         }} />
